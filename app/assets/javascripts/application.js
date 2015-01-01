@@ -14,3 +14,21 @@
 //= require jquery_ujs
 
 //= require_tree .
+$(function() {
+
+  // $(".robot").click(function(e) {
+  //   e.preventDefault();
+  //   $(".book").hide();
+  //   console.log("robot clicked");
+  //   $.ajax("/books/new", {
+  //     type: "POST",
+  //     success: function() {
+  //       $(".book").show();
+  //       console.log("yay!");
+  //     }
+  //   });
+  // });
+  //
+  // $(".book").hide();
+  //
+});

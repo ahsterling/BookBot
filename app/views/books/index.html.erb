@@ -1,0 +1,26 @@
+
+  <div class = "row">
+    <div class = "col-xs-4">
+      <%= link_to image_tag("android.png", class: "robot img-responsive"), "/books/new", method: :post %>
+    </div>
+    <div class="col-xs-8">
+      <% if @book != nil %>
+        <div class="book bg-info">
+          <!-- <div class="row">
+            <div class = "col-xs-2"> -->
+              <%= image_tag @book['volumeInfo']['imageLinks']['thumbnail'], class: "img img-responsive" %>
+            <!-- </div> -->
+            <!-- <div class="col-xs-10"> -->
+              <div>
+                <h3><%= @book['volumeInfo']['title'] %></h3>
+                <strong><%= @book['volumeInfo']['authors'][0] %></strong>
+
+                <p><%= @book['volumeInfo']['description'] %></p>
+              </div>
+            <!-- </div> -->
+          <!-- </div> -->
+        </div>
+      <% end %>
+    </div>
+
+  </div>

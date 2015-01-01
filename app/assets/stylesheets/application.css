@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+.robot {
+  display: inline-block;
+  max-height: 500px;
+}
+
+.book {
+  display: inline-block;
+  padding: 10px;
+}
+
+.header {
+  text-align: center;
+}
