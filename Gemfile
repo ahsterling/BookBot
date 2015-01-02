@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'dotenv-rails'
 gem 'httparty'
 gem 'rails', '4.1.8'
 gem 'pg'

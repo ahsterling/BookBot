@@ -1,22 +1,25 @@
 class BooksController < ApplicationController
 
   def index
-    @book = book_search
+    # @book = goodreads_search("nonfiction")
+    @book = Book.last
   end
 
   def new
-    book_search
+    book = goodreads_search(params['genre'])
+    Book.create(
+      title: book.best_book.title,
+      author: book.best_book.author.name,
+      image_url: book.best_book.image_url,
+      rating: book.average_rating
+      )
     redirect_to books_path
   end
 
-  def book_search
-    titles = ["cats", "dinosaurs", "dogs", "magic", "fantasy"]
-    title = titles.sample
-    books = HTTParty.get("https://www.googleapis.com/books/v1/volumes?q=#{title}&maxResults=40").parsed_response
-    books['items'].sample
-    # Book.create(title: book_info['volumeInfo']['title'],
-    #             author: book_info['volumeInfo']['authors'][0],
-    #             pub_date: book_info['volumeInfo']['publishedDate'],
-    #             description: book_info['volumeInfo']['description'])
+  def goodreads_search(genre)
+    client = Goodreads::Client.new(api_key: ENV["GOODREADS_KEY"], api_secret: ENV["GOODREADS_SECRET"])
+    search = client.search_books(genre, field: "genre")
+    search.results.work.sample
+
   end
 end
