@@ -47,6 +47,13 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.2)
+    goodreads (0.3.0)
+      activesupport (>= 3)
+      hashie (~> 2.0)
+      i18n (~> 0.5)
+      oauth (~> 0.4)
+      rest-client (~> 1.6)
+    hashie (2.1.2)
     hike (1.2.3)
     httparty (0.13.3)
       json (~> 1.8)
@@ -65,6 +72,8 @@ GEM
     minitest (5.5.0)
     multi_json (1.10.1)
     multi_xml (0.5.5)
+    netrc (0.10.2)
+    oauth (0.4.7)
     pg (0.17.1)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -92,6 +101,9 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    rest-client (1.7.2)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     rspec-core (3.0.4)
       rspec-support (~> 3.0.0)
     rspec-expectations (3.0.4)
@@ -142,6 +154,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   coffee-rails (~> 4.0.0)
+  goodreads
   httparty
   jbuilder (~> 2.0)
   jquery-rails
