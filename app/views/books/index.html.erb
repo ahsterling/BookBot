@@ -3,7 +3,7 @@
     <%= form_tag "/books/new", method: :post do %>
       <div class="col-xs-2">
         <div class="genre-choices">
-          <div><%= radio_button_tag :genre, "fantasy", checked: true %> Fantasy</div>
+          <div><%= radio_button_tag :genre, "fantasy" %> Fantasy</div>
           <div><%= radio_button_tag :genre, "fiction" %> Fiction</div>
           <div><%= radio_button_tag :genre, "ya" %> Young Adult</div>
           <div><%= radio_button_tag :genre, "romance" %> Romance</div>
@@ -11,15 +11,10 @@
           <div><%= radio_button_tag :genre, "graphic-novels-comics" %> Graphic Novels</div>
           <div><%= radio_button_tag :genre, "memoir" %> Memoir</div>
           <div><%= radio_button_tag :genre, "history" %> History</div>
-
-
-
-
-
         </div>
       </div>
       <div class = "col-xs-4">
-        <%= image_submit_tag "android.png" %>
+        <%= image_submit_tag "android.png", class: "robot" %>
       </div>
     <% end %>
     <div class="col-xs-5">
