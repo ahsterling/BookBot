@@ -19,7 +19,7 @@
   /*display: inline-block;*/
   max-height: 500px;
   margin: auto;
-  position: absolute;
+  /*position: absolute;*/
 }
 
 .robot:focus {
