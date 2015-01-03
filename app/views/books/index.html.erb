@@ -1,7 +1,7 @@
 <div class="container">
   <div class = "row">
     <%= form_tag "/books/new", method: :post do %>
-      <div class="col-sm-3">
+      <div class="col-xs-6 col-sm-3">
         <div class="genre-choices">
           <div><%= radio_button_tag :genre, "fantasy" %> Fantasy</div>
           <div><%= radio_button_tag :genre, "fiction" %> Fiction</div>
@@ -13,7 +13,7 @@
           <div><%= radio_button_tag :genre, "history" %> History</div>
         </div>
       </div>
-      <div class = "col-sm-5">
+      <div class = "col-xs-6 col-sm-5">
         <%= image_submit_tag "android.png", class: "robot img-responsive" %>
       </div>
     <% end %>
